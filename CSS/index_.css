@@ -1,0 +1,14 @@
+.contenedor{
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    margin-right: auto;
+    margin-left: auto;
+    gap:1%;
+    grid-template-areas: 
+    "header header header"
+    " main   main  sidebar"
+    "bloque1 bloque2 sidebar"
+    "footer footer footer";
+}
