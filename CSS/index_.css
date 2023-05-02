@@ -8,7 +8,42 @@
     gap:1%;
     grid-template-areas: 
     "header header header"
-    " main   main  sidebar"
-    "bloque1 bloque2 sidebar"
+    "sidebar  main   main"
+    "sidebar main main"
     "footer footer footer";
+}
+
+.contenedor .header{
+    grid-area: header;
+    background-color:#12203e;
+    color: aliceblue;
+    font-size: 1rem;
+    height: 12.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 380px;
+}
+
+
+.contenedor .main{
+    grid-area: main;
+    background-color:bisque;
+    color:black;
+    font-size: 3rem;
+    height: 70vh;
+}
+
+.contenedor .sidebar{
+    grid-area: sidebar;
+    background-color:orangered;
+    color:black;
+    font-size: 3rem;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+    background-color:#12203e;
+    color: aliceblue;
+    font-size: 5rem;
+    height: 12.5 vh;
 }
