@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "texto";
+    src: url(../fonts/GothicA1-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "titulo";
+    src: url(../fonts/GothicA1-ExtraBold.ttf);
+}
+
 html{
     min-height: 100%;
 }
@@ -23,6 +33,7 @@ html{
     grid-area: navbar;
     background-color: #F2EAD3;
     color: #321313;
+    font-family: "texto";
     display: flex;
     height: 100%;
     width: 100%;
@@ -36,6 +47,7 @@ html{
     font-size: 2rem;
     column-gap: 100px;
     background-color:#321313;
+    font-family: "texto";
     display: flex;
     height: 100%;
     width: 100%;
@@ -95,6 +107,10 @@ img {
     background-color: #F4991A;
     color: #321313;
     font-size: 3rem;
+    font-family: "titulo";
+    display: flex;
+    align-items:self-start;
+    justify-content: center;
 }
 
 .sidebar2 {
@@ -102,12 +118,14 @@ img {
     background-color: #F4991A;
     color: #321313;
     font-size: 3rem;
+    font-family: "texto";
 }
 
 .footer {
     grid-area: footer;
     background-color: #321313;
     height: 130px;
+    font-family: "texto";
 }
 
 .icons_foot{
