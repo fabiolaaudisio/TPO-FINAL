@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container > header {
+    background-color:green;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.grid-container > div form {
+    background-color: green;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.grid-container > footer {
+    background-color: green;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
