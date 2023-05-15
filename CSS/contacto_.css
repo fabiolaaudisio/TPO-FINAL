@@ -53,22 +53,29 @@ a {
     font-size: 12px;
 }
 
-
-
-
-
-
-
 .grid-container > div form {
     background-color: #F4991A;
     text-align: center;
-
     font-size: 30px;
 }
 
+
 .grid-container > footer {
-    background-color:#321313;
-    text-align: center;
-  
-    font-size: 30px;
+    background-color: #321313;
+    width: 100%;
+    height: 40px;
+    font-family: "texto"
+}
+
+
+.icons_foot{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    color: #F2EAD3;
+    height: auto;
+    column-gap: 15px;
+    font-size: 20px;
 }
