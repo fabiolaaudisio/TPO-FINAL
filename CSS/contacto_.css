@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "texto";
+    src: url(../fonts/GothicA1-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "titulo";
+    src: url(../fonts/GothicA1-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "subtitulo";
+    src: url(../fonts/GothicA1-Medium.ttf);
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -53,10 +69,28 @@ a {
     font-size: 12px;
 }
 
+h1 {
+    font-family:"titulo";
+    text-align: center;
+}
+
+h2 {
+    font-family:"subtitulo";
+    text-align: center;
+}
+
+p{font-family:"sbtitulo";
+  text-align: center;
+}
+
 .grid-container > div form {
     background-color: #F4991A;
     text-align: center;
     font-size: 30px;
+    font-family:"texto";
+    font-size: medium;
+    margin-top: 80px;
+    
 }
 
 
