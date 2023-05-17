@@ -61,58 +61,10 @@ html{
     width: 100%; 
     height: auto;
     background-color: #F2EAD3;
+    font-size: 1.5em;
 }
 .list-group-item {
     background-color: #F2EAD3;
-}
-
-.logo {
-    width: 90px;
-}
-
-
-.header {
-    grid-area: header;
-    background-color:#321313;
-    font-family: "texto";
-    font-size: 10px;
-    display: flex;
-    height: auto;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-a {
-    all: unset;
-    cursor: pointer;
-}
-
-.icons_head{
-    padding-right: 20px;
-    display: flex;
-    width: 100%;
-    align-items:center;
-    justify-content: flex-end;
-    color:#F2EAD3;
-    height: auto;
-    column-gap: 20px;
-}
-
-.enlaces {
-    display:flex;
-    flex-direction: column;
-    justify-content:space-around;
-    gap: 10px;
-    align-items:center;
-}
-
-.enlaces i {
-    font-size: 20px;
-}
-.enlaces span {
-    font-size: 12px;
 }
 
 #api {
@@ -124,25 +76,12 @@ a {
     border-radius: 5%;
 }
 
-.footer {
-    grid-area: footer;
-    background-color: #321313;
-    width: 100%;
-    height: auto;
-    font-family: "texto";
+.card-body {
+    & :hover {
+        color:#F4991A;
+    }
 }
 
-.icons_foot{
-    padding: 10px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content:center;
-    color: #F2EAD3;
-    height: auto;
-    column-gap: 15px;
-    font-size: 20px;
-}
 
 @media (min-width: 600px) {
     .contenedor {
@@ -152,34 +91,7 @@ a {
         "main main"
         "footer footer";
     }
-    .logo {
-        width: 115px;
-    }
-    .icons_head{
-        display: flex;
-        width: 100%;
-        height: auto;
-        column-gap: 20px;
-        padding-right: 50px;
-        align-items:center;
-        justify-content: flex-end;
-        color:#F2EAD3;
-    }
     
-    .enlaces {
-        display:flex;
-        flex-direction: column;
-        justify-content:space-around;
-        gap: 10px;
-        align-items:center;
-    }
-    
-    .enlaces i {
-        font-size: 25px;
-    }
-    .enlaces span {
-        font-size: 15px;
-    }
     #api {
         grid-area: main;
         background-color:#F4991A;
@@ -191,8 +103,9 @@ a {
     .card {
         width: 50%; 
         height: auto;
+        font-size: 2em;
     }
-}
+
 
 @media (min-width: 900px) {
     .contenedor{
@@ -206,21 +119,7 @@ a {
         "main main main"
         "footer footer footer";
     }
-    .enlaces span{
-        font-size: 16px;
-    }
-    .header {
-        font-size: 2rem;
-        column-gap: 100px;
-        background-color:#321313;
-        font-family: "texto";
-        display: flex;
-        height: auto;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+   
     #api {
         grid-area: main;
         background-color:#F4991A;
@@ -232,9 +131,6 @@ a {
     .card {
         width: 50%; 
         height: auto;
-    }
-
-    .logo {
-        width: 150px;
+        font-size: 2em;
     }
 }

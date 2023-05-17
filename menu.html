@@ -9,6 +9,8 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/711d651682.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <title>Stella cafe</title>
 </head>
 
@@ -17,26 +19,26 @@
 
         <header class="header">
 
-            <a href="index_.html">
+            <a class="transicion" href="index_.html">
                 <img class="logo" src="img/photo-output (1).png" s alt="Cafe Stella">
             </a>
 
             <div class="icons_head">
 
-                <a href="gift_card.html">
+                <a class="transicion" href="gift_card.html" >
                     <div class="enlaces">
-
                         <i class="fa-solid fa-gift"></i>
                         <span>GIFT CARD</span>
                     </div>
                 </a>
 
                 </a>
-                <a href="contacto_.html">
+                <a  class="transicion" href="contacto_.html">
                     <div class="enlaces">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <span>COMUNICATE</span>
                     </div>
+
                 </a>
 
             </div>
@@ -55,10 +57,10 @@
                     <p class="card-text">{{details}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ingredients}}</li>
+                    <li class="list-group-item" v-for="ingredient in ingredients">{{ingredient}}</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Volver atrás</a>
+                    <a href="index.html" class="card-link">Volver atrás</a>
                 </div>
             </div>
         </main>

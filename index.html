@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/711d651682.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/index_.css">
-
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <title>Stella cafe</title>
 </head>
 
@@ -16,35 +17,28 @@
 
         <header class="header">
 
-            <a href="index_.html">
+            <a class="transicion" href="index_.html">
                 <img class="logo" src="img/photo-output (1).png" s alt="Cafe Stella">
             </a>
 
             <div class="icons_head">
 
-                <a href="gift_card.html">
+                <a class="transicion" href="gift_card.html" >
                     <div class="enlaces">
-
                         <i class="fa-solid fa-gift"></i>
                         <span>GIFT CARD</span>
                     </div>
                 </a>
 
                 </a>
-                <a href="contacto_.html">
+                <a  class="transicion" href="contacto_.html">
                     <div class="enlaces">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <span>COMUNICATE</span>
                     </div>
 
                 </a>
-                <!-- <a href="cargatucv_.html">
-                    <div class="enlaces">
-                        <i class="fa-solid fa-file-signature"></i>
-                        <span>Carga tu CV</span>
-                    </div>
 
-                </a>-->
             </div>
 
         </header>
@@ -58,13 +52,14 @@
         </article>
 
         <aside class="sidebar">
+
             <h1 class="titulo">MENU</h1>
-            <!-- <h3 class="subt">BEBIDAS</h3> 
-            <p1 class="drinks">Americano</p>
-            <p2 class="drinks">Moka</p>
-            <p3 class="drinks">Latte Machiatto</p>
-            <p4 class="drinks">Flat White</p>
-            <p5 class="drinks">Caramel Latte Helado con crema de Vainilla</p>-->
+ 
+            <ul  id="menu">
+                <li class="bebidas" v-for="bebida in bebidas">
+                    <a :href="'./menu.html?'+bebida.id">{{bebida.name}}</a>
+                </li>
+            </ul>
 
         </aside>
 
@@ -89,7 +84,8 @@
         </footer>
 
     </div>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/carga.js"></script>
 </body>
 
 </html>

@@ -4,8 +4,9 @@ const getInfoAsync = async (id) => {
         const respuesta = await fetch(`https://64625b3c7a9eead6facd3d7d.mockapi.io/api/coffee/bebidas/${id}`)
         const respuestaJson = await respuesta.json()
 
-        console.log(respuestaJson)
+       
 
+       
         const { createApp} = Vue
         createApp({
             data() {
@@ -20,8 +21,11 @@ const getInfoAsync = async (id) => {
 
     } catch (error) { console.log("Hubo un error", error) }
 }
+const htmlLocation = window.location.href
 
-getInfoAsync(2)
+const pageId = htmlLocation.split("?")[1]
+
+getInfoAsync(pageId)
 
 
 
