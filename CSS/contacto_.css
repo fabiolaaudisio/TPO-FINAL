@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "texto";
+    src: url(../fonts/GothicA1-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "titulo";
+    src: url(../fonts/GothicA1-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "subtitulo";
+    src: url(../fonts/GothicA1-Medium.ttf);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px;
+    gap: 10px;
+    background-color: #F4991A;
+  
+}
+
+.grid-container > header  {
+        background-color:#321313;
+        font-family: "texto";
+        font-size: 10px;
+        display: flex;
+        height: 150px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+}
+.logo {
+    width: 155px;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.icons_head{
+    padding-right: 20px;
+    display: flex;
+    width: 100%;
+    align-items:center;
+    justify-content: flex-end;
+    color:#F2EAD3;
+    height: auto;
+    column-gap: 20px;
+}
+
+.enlaces {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    gap: 10px;
+    align-items:center;
+}
+
+.enlaces i {
+    font-size: 20px;
+}
+.enlaces span {
+    font-size: 12px;
+}
+
+h1 {
+    font-family:"titulo";
+    text-align: center;
+}
+
+h2 {
+    font-family:"subtitulo";
+    text-align: center;
+}
+
+p{font-family:"sbtitulo";
+  text-align: center;
+}
+
+.grid-container > div form {
+    background-color: #F4991A;
+    text-align: center;
+    font-size: 30px;
+    font-family:"texto";
+    font-size: medium;
+    margin-top: 80px;
+    
+}
+
+
+.grid-container > footer {
+    background-color: #321313;
+    width: 100%;
+    height: 40px;
+    font-family: "texto"
+}
+
+
+.icons_foot{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    color: #F2EAD3;
+    height: auto;
+    column-gap: 15px;
+    font-size: 20px;
+}
