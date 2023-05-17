@@ -1,3 +1,31 @@
+.spinner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border: 4px solid rgba(0, 0, 0, .1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color:#F4991A;
+    animation: spin 1s ease infinite;
+
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @font-face {
     font-family: "texto";
     src: url(../fonts/GothicA1-ExtraLight.ttf);
@@ -18,50 +46,36 @@ html{
     min-height: 100%;
 }
 
-body {
-    font-size: 10px;
-}
-
 .contenedor {
     display: grid;
-    gap: 1em;
+    gap: 10px;
     grid-template-columns: auto;
-    grid-template-rows: 10em auto auto 20em 5em 10em;
+    grid-template-rows: 100px auto 100px;
     grid-template-areas:
     "header"
     "main"
-    "sidebar"
-    "sidebar2"
-    "navbar"
     "footer";
 }
 
-.media {
+.card {
     width: 100%; 
     height: auto;
+    background-color: #F2EAD3;
+}
+.list-group-item {
+    background-color: #F2EAD3;
 }
 
 .logo {
-    width: 9em;
+    width: 90px;
 }
 
-.navbar {
-    grid-area: navbar;
-    background-color: #F2EAD3;
-    color: #321313;
-    display: flex;
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-}
 
 .header {
     grid-area: header;
     background-color:#321313;
     font-family: "texto";
-    font-size: 1em;
+    font-size: 10px;
     display: flex;
     height: auto;
     width: 100%;
@@ -76,84 +90,38 @@ a {
 }
 
 .icons_head{
-    padding-right: 2em;
+    padding-right: 20px;
     display: flex;
     width: 100%;
     align-items:center;
     justify-content: flex-end;
     color:#F2EAD3;
     height: auto;
-    column-gap: 2em;
+    column-gap: 20px;
 }
 
 .enlaces {
     display:flex;
     flex-direction: column;
     justify-content:space-around;
-    gap: 1em;
+    gap: 10px;
     align-items:center;
 }
 
 .enlaces i {
-    font-size: 2em;
+    font-size: 20px;
 }
 .enlaces span {
-    font-size: 1em;
+    font-size: 12px;
 }
 
-.main {
+#api {
     grid-area: main;
-    background-color: #321313;
+    background-color:#F4991A;
     display: flex;
     justify-content:center;
     align-items: center;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: #F4991A;
-    color: #321313;
-    display: flex;
-    flex-direction: column;
-}
-
-.titulo {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    font-family: "titulo";
-    font-size: 3em;
-}
-
-
-
-.sidebar2 {
-    grid-area: sidebar2;
-    background-color: #F4991A;
-    color: #321313;
-    font-family: "texto";
-    display: flex;
-    align-items:self-start;
-    justify-content: center;
-}
-
-.spinner {
-    border: 0,4em solid rgba(0, 0, 0, .1);
-    width: 3,6em;
-    height: 3,6em;
-    border-radius: 5em;
-    border-left-color:#F4991A;
-
-    animation: spin 1s ease infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    border-radius: 5%;
 }
 
 .footer {
@@ -165,27 +133,23 @@ a {
 }
 
 .icons_foot{
-    padding-top: 2em;
+    padding: 10px;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content:center;
     color: #F2EAD3;
     height: auto;
-    column-gap: 2em;
-    font-size: 2em;
+    column-gap: 15px;
+    font-size: 20px;
 }
 
 @media (min-width: 600px) {
     .contenedor {
-        grid-template-columns: 200px auto;
-        grid-template-rows: 100px auto auto 200px 50px 100px;
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: 
         "header header"
-        "main sidebar"
-        "main sidebar"
-        "sidebar2 sidebar2"
-        "navbar navbar"
+        "main main"
         "footer footer";
     }
     .logo {
@@ -216,44 +180,37 @@ a {
     .enlaces span {
         font-size: 15px;
     }
-    .navbar {
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-    }
-    .icons_foot{
-        padding-top: 10px;
+    #api {
+        grid-area: main;
+        background-color:#F4991A;
         display: flex;
-        width: 100%;
-        align-items: center;
         justify-content:center;
-        color: #F2EAD3;
+        align-items: center;
+        border-radius: 0%;
+    }
+    .card {
+        width: 50%; 
         height: auto;
-        column-gap: 20px;
-        font-size: 20px;
     }
 }
-
 
 @media (min-width: 900px) {
     .contenedor{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(3, auto);
     margin-right: auto;
     margin-left: auto;
     gap: 1%;
     grid-template-areas:
         "header header header"
-        "sidebar main sidebar2"
-        "sidebar main sidebar2"
-        "navbar navbar navbar"
+        "main main main"
         "footer footer footer";
     }
     .enlaces span{
         font-size: 16px;
     }
     .header {
-        font-size: 20px;
+        font-size: 2rem;
         column-gap: 100px;
         background-color:#321313;
         font-family: "texto";
@@ -264,41 +221,20 @@ a {
         align-items: center;
         justify-content: space-between;
     }
-    .sidebar {
-        grid-area: sidebar;
-        background-color: #F4991A;
-        color: #321313;
-        font-size: 30px;
-        font-family: "titulo";
+    #api {
+        grid-area: main;
+        background-color:#F4991A;
         display: flex;
-        align-items:self-start;
-        justify-content: center;
+        justify-content:center;
+        align-items: center;
+        border-radius: 0%;
     }
-    
-    .sidebar2 {
-        grid-area: sidebar2;
-        background-color: #F4991A;
-        color: #321313;
-        font-size: 30px;
-        font-family: "texto";
-        display: flex;
-        align-items:self-start;
-        justify-content: center;
+    .card {
+        width: 50%; 
+        height: auto;
     }
 
     .logo {
         width: 150px;
-    }
-
-    .icons_foot{
-        padding-top: 10px;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content:center;
-        color: #F2EAD3;
-        height: auto;
-        column-gap: 20px;
-        font-size: 30px;
     }
 }
