@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +8,12 @@
     <link rel="stylesheet" href="CSS/contacto_.css">
     <title>Contacto</title>
 </head>
-
 <body>
 
 <div class="grid-container">
     <header>
 
-        <a href="index.html">
+        <a href="index_.html">
             <img class="logo" src="img/photo-output (1).png" s alt="Cafe Stella">
         </a>
 
@@ -37,16 +35,11 @@
                 </div>
 
             </a>
-            <!-- <a href="cargatucv_.html">
-                <div class="enlaces">
-                    <i class="fa-solid fa-file-signature"></i>
-                    <span>Carga tu CV</span>
-                </div>
-
-            </a>-->
+           
         </div>
 
 </header>
+<h1 id="datosguardados"></h1>
 
 <div class="form">
  
@@ -58,41 +51,43 @@
 <fieldset>
 <legend>Ingrese sus datos</legend>
 
-            <div>
-                <label for="Nombre">Nombre</label>
-                <input type="text" required>
-            </div><br>
+<div>
+<label for="Nombre">Nombre</label>
+<input type="text" required id="nombre">
+</div><br>
 
-            <div>
-                <label for="E-mail">E-mail</label>
-                <input type="email" required>
-            </div>
+<div>
+<label for="E-mail">E-mail</label>
+<input type="email" required>
+</div>
 
-            <div>
-                <h4>¿Cómo conociste la empresa?</h4>
+<div>
+<h4>¿Cómo conociste la empresa?</h4>
 
-                <input type="radio" name="Conocer" id="Televesión" required>
-                <label for="Televesión">Televesión</label>
+<input type="radio" name="Conocer" id="Televesión" required>
+<label for="Televesión">Televesión</label>
 
-                <input type="radio" name="Conocer" id="Radio" required>
-                <label for="Radio">Radio</label>
+<input type="radio" name="Conocer" id="Radio" required>
+<label for="Radio">Radio</label>
 
-                <input type="radio" name="Conocer" id="Redes sociales" required>
-                <label for="Redes sociales">Redes sociales</label>
+<input type="radio" name="Conocer" id="Redes sociales" required>
+<label for="Redes sociales">Redes sociales</label>
 
-                <input type="radio" name="Conocer" id="Recomendado" required>
-                <label for="Recomendado">Recomendado por un conocido</label>
-            </div> <br>
+<input type="radio" name="Conocer" id="Recomendado" required>
+<label for="Recomendado">Recomendado por un conocido</label>
+</div> <br>
 
-            <div>
-                <label for="Asunto">Asunto</label>
-                <input type="text" required>
-            </div><br>
+<div>
+<label for="Asunto">Asunto</label>
+<input type="text" required>
+</div><br>
 
-            <div>
-                <label for="Mensaje">Mensaje</label>
-                <textarea name="Mensaje" id="Mensaje" cols="30" rows="10" required>Escriba aquí su mensaje...</textarea>
-            </div><br>
+<div>
+<label for="Mensaje">Mensaje</label>
+<textarea name="Mensaje" id="Mensaje" cols="30" rows="10" required>Escriba aquí su mensaje...</textarea>
+</div><br>
+
+<button id="boton">Guardar</button>
 
 <br>
 <input type="submit" value="Enviar">
@@ -117,8 +112,8 @@
 
 
 </div>
+<script src="js/contacto_.js"></script>
 </body>
-
 </html>
 
 
