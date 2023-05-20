@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/711d651682.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/index_.css">
-    <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
     <title>Stella cafe</title>
 </head>
 
@@ -17,13 +18,13 @@
 
         <header class="header">
 
-            <a class="transicion" href="index_.html">
+            <a class="transicion" href="index.html">
                 <img class="logo" src="img/photo-output (1).png" s alt="Cafe Stella">
             </a>
 
             <div class="icons_head">
 
-                <a class="transicion" href="gift_card.html" >
+                <a class="transicion" href="gift_card.html">
                     <div class="enlaces">
                         <i class="fa-solid fa-gift"></i>
                         <span>GIFT CARD</span>
@@ -31,7 +32,7 @@
                 </a>
 
                 </a>
-                <a  class="transicion" href="contacto_.html">
+                <a class="transicion" href="contacto_.html">
                     <div class="enlaces">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <span>COMUNICATE</span>
@@ -54,20 +55,34 @@
         <aside class="sidebar">
 
             <h1 class="titulo">MENU</h1>
- 
-            <ul  id="menu">
-                <li class="bebidas" v-for="bebida in bebidas">
-                    <a :href="'./menu.html?'+bebida.id">{{bebida.name}}</a>
-                </li>
-            </ul>
+
+            <div id="menu">
+                <h1 v-if="cargando">Cargando...</h1>
+                <ul v-else>
+                    <li class="bebidas" v-for="bebida in bebidas">
+                        <a :href="'./menu.html?'+bebida.id">{{bebida.name}}</a>
+                    </li>
+                </ul>
+
+            </div>
 
         </aside>
 
         <aside class="sidebar2">
-            <h3>Menu2</h3>
+            <div class="expo1">
+                <h1>Expo café</h1>
+                <h2>Argentina 2023</h2>
+            </div>
+            <div class="expo2">
+                <img  src="./img/Expo.PNG" alt="">
+                <h3>CENTRO DE CONVENCIONES BUENOS AIRES</h3>
+                <P>Av.Pres.Figueroa Alcorta 2099, C1112 CABA</P>
+
+            </div>
+
         </aside>
 
-        <div class="spinner"></div>
+        <!-- <div class="spinner"></div> -->
 
         <footer class="footer">
             <div class="icons_foot">
@@ -84,8 +99,10 @@
         </footer>
 
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/carga.js"></script>
+
 </body>
 
 </html>
