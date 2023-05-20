@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "texto";
+    src: url(../fonts/GothicA1-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "titulo";
+    src: url(../fonts/GothicA1-ExtraBold.ttf);
+}
+
+html{
+    min-height: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    margin-right: auto;
+    margin-left: auto;
+    gap: 1%;
+    grid-template-areas:
+        "header header header"
+        "navbar navbar navbar"
+        "sidebar  main   sidebar2"
+        "sidebar main sidebar2"
+        "footer footer footer";
+    flex-wrap: wrap;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #F2EAD3;
+    color: #321313;
+    font-family: "texto";
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.header {
+    grid-area: header;
+    font-size: 2rem;
+    column-gap: 100px;
+    background-color:#321313;
+    font-family: "texto";
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.icons_head{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    color:#F2EAD3;
+    height: 100%;
+    column-gap: 20px;
+}
+
+.enlaces {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.enlaces span{
+    font-size: 16px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #321313;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.main .animation {
+    height:fit-content;
+    width: fit-content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #F4991A;
+    color: #321313;
+    font-size: 3rem;
+    font-family: "titulo";
+    display: flex;
+    align-items:self-start;
+    justify-content: center;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+    background-color: #F4991A;
+    color: #321313;
+    font-size: 3rem;
+    font-family: "texto";
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #321313;
+    height: 130px;
+    font-family: "texto";
+}
+
+.icons_foot{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    color: #F2EAD3;
+    height: 100%;
+    column-gap: 15px;
+    font-size: 2rem;
+}
+
+@media screen and (max-width:600px) {
+    .main h1 {
+        font-size: 16px;
+    }
+}
