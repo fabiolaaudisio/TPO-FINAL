@@ -1,17 +1,27 @@
-const nombreIngresado= document.getElementById("nombre")
-const mensajedatosguardados=document.getElementById("datosguardados")
-const boton=document.getElementById("boton")
+function validarFormulario() {
+    var nombre = document.getElementById("nombre").value.trim();
+    var email=document.getElementById("email").value.trim();
+    var asunto=document.getElementById("asunto").value.trim();
+    var mensaje=document.getElementById("mensaje").value.trim();
+   
 
-boton.addEventListener("click", ()=> {
+    if (nombre === "" || email === "" || asunto === "" || mensaje === "") {
+        alert("Por favor, complete todos los campos del formulario.");
+        return false;
+      }
+  
 
-const nombre=nombreIngresado.value
+     
 
-for(let i=0; i<nombre.lenght; i++){
-    let codigo = nombre.charCodeat(i)
-    if(nombre!="" && ((codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122))){
-        mensajedatosguardados.textContent= `Su datos y mensaje se han guardado satisfactoriamente. Haz click en enviar ${nombre}`
+      for (var i = 0; i < nombre.length; i++) {
+        var charCode = nombre.charCodeAt(i);
 
-    }else if(nombre=="" || ((codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122))) {
-        mensajedatosguardados.textContent=""
-        alert("Ingrese un nombre sin números y sin carácteres especiales")
-    }}})
+        if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+          alert("El campo 'nombre' solo puede contener caracteres alfabéticos y espacios.");
+          return false;
+
+        }
+
+    alert("Formulario enviado correctamente.");
+    return true;
+      }}
