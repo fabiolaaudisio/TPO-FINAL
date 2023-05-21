@@ -41,7 +41,7 @@ p {
     text-align: center;
 }
 
-.grid-container>div form {
+.form {
     grid-area: main;
     background-color: #F4991A;
     text-align: center;
