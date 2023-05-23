@@ -19,20 +19,13 @@
    grid-template-rows: 150px auto 100px;
    gap: 10px;
    background-color: #F4991A;
+   width: 100%;
    grid-template-areas:
       "header"
       "main"
       "footer";
 }
 
-.form {
-   text-align: center;
-   font-size: 30px;
-   font-family: "texto";
-   font-size: medium;
-   margin-top: 0%;
-   content: 284px;
-}
 
 .rojo {
    color: #321313;
@@ -66,32 +59,34 @@ p {
 
 
 .img {
-   width: 25%;
-   height: auto;
+   width: 70%;
+   height: fit-content;
    border-radius: 5%;
+   justify-self: right;
+
 }
 
 .contendor {
    grid-area: main;
+   display: grid;
    color: #321313;
-   display: flex;
    max-width: 120rem;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: repeat(2, auto);
-   display: inline;
+   max-height: fit-content;
    margin-right: auto;
    margin-left: auto;
-   gap: 1, 5%;
-   grid-template-areas:
-      "title" "title"
-      "sidebar" "sidebar2 ";
+   gap: 1,5%;
+   align-items: center;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: 
+   "title" "title"
+   "sidebar" "form";
 
-   flex-direction: row;
 
 }
 
 .title {
-   grid-area: title;
+   grid-area: main;
    display: grid;
    align-items: self-start;
    font-size: 100%;
@@ -103,35 +98,47 @@ p {
    font-family: "titulo";
 }
 
+
 .price_box {
    color: #F2EAD3;
 }
 
+
 .sidebar {
-   grid-area: sidebar;
-   display: flex;
-   align-items: flex-start;
-   justify-content: left;
-   padding-left: 120px;
-   column-width: 60rem;
-   grid-row-start: sidebar;
-   margin: 0%;
-   /*height: auto;*/
-   flex-direction: column;
+   grid-area: main;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   justify-content:center;
+   margin-top: 0% ;
+   width: 30%;
+   height: 30%;
+   
 
 }
+.form {
+   grid-area: main;
+   display: grid;
+   text-align: center;
+   font-size: 30px;
+   font-family: "texto";
+   font-size: medium;
+   margin-top: 0%;
+   justify-content: left;
+   padding-bottom: 5%;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   width: 80%;
+}
+
 
 .sidebar2 {
-   grid-area: sidebar2;
-   display: flex;
-   align-items: flex-start;
-   justify-content: right;
-   padding-right: 100px;
-   column-width: 60em;
-   grid-row-start: sidebar2;
+   grid-area: main;
+   align-self: auto;
+   justify-content: left;
    height: auto;
-   margin: 0%;
-
+   margin-left: auto;
+   width: 100%;
 }
 
 #button {
@@ -140,7 +147,17 @@ p {
    margin-top: 10px;
 }
 
-.boton {
-   width: 200px;
-   height: 30px;
+@media  screen and (max-width:800px) {
+   .img{
+      width: 80%;
+      height: 80%;
+      justify-self: center;
+   }
+   .sidebar{
+      width: fit-content;
+      height: fit-content;
+   }
+   .sidebar2{
+      width: auto;
+   }
 }
