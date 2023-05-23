@@ -13,7 +13,6 @@
     src: url(../fonts/GothicA1-Medium.ttf);
 }
 
-
 html {
     min-height: 100%;
 }
@@ -26,10 +25,9 @@ body {
     display: grid;
     gap: 1em;
     grid-template-columns: auto;
-    grid-template-rows: 10em 2em auto auto auto 10em;
+    grid-template-rows: 10em auto auto auto 10em;
     grid-template-areas:
         "header"
-        "navbar"
         "main"
         "sidebar"
         "sidebar2"
@@ -77,18 +75,19 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "titulo";
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .bebidas {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: flex-start;
     font-family: "subtitulo";
-    font-size: 1.8em;
-    padding-bottom: 1.2em;
+    font-size: 1em;
+    padding-bottom: 0.5em;
     padding-left: 1em;
     text-transform: uppercase;
+
     & :hover {
         color: #F2EAD3;
     }
@@ -98,7 +97,6 @@ ul {
     list-style: none;
 }
 
-
 .sidebar2 {
     grid-area: sidebar2;
     background-color: #F4991A;
@@ -106,46 +104,46 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-
-.expo1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding-bottom: 1em;
+    perspective: 700px;
 }
 
-.expo1 h1 {
+.sidebar2 h1 {
     font-family: "pacifico";
-    font-size: 4em;
+    font-size: 3em;
 }
 
-.expo1 h2  {
+.sidebar2 h2 {
     font-family: "titulo";
-    font-size: 2em;
-}
-
-.expo2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-    padding: 1em;
-}
-
-.expo2 h3 {
-    font-family: "subtitulo";
     font-size: 1em;
 }
 
-.expo2 p {
-    font-family: "texto";
-    font-size: 1.2em;
+.sidebar2 span {
+    font-family: "subtitulo";
+    font-size: 1em
 }
 
-.expo2 img{
+.sidebar2 img {
     width: 9em;
+}
+
+.map {
+    animation: rotar 5s linear infinite;
+}
+
+.map:hover {
+    cursor: pointer;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateY(180deg)
+    }
+
+    to {
+        transform: rotateY(-180deg);
+    }
 }
 
 /*.spinner {
@@ -172,62 +170,41 @@ ul {
 @media (min-width: 600px) {
     .contenedor {
         grid-template-columns: 250px auto;
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
             "header header"
             "main sidebar"
             "main sidebar"
             "sidebar2 sidebar2"
-            "navbar navbar"
             "footer footer";
     }
-
-    .navbar {
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
+    .bebidas {
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+    .sidebar2 h1 {
+        font-size: 4em;
     }
     
-    .expo1 h1 {
-        font-size: 6em;
+    .sidebar2 h2 {
+        font-size: 2em;
     }
-    
-    .expo2 {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        align-items: center;
-        justify-content:space-between;
-
+    .sidebar2 span {
+        font-size: 1.5em
     }
-    
-    .expo2 h3 {
-        font-size: 1.3em;
-    }
-    
-    .expo2 p {
-        font-size: 1.4em;
-    }
-    
-    .expo2 img{
-        width: 10em;
-    }
-
 }
-
+    
 
 @media (min-width: 900px) {
     .contenedor {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(4, auto);
         margin-right: auto;
         margin-left: auto;
-        gap: 1%;
         grid-template-areas:
             "header header header"
             "sidebar main sidebar2"
             "sidebar main sidebar2"
-            "navbar navbar navbar"
             "footer footer footer";
     }
 
@@ -239,6 +216,16 @@ ul {
         align-items: center;
         justify-content: center;
     }
+
+    .bebidas {
+        font-size: 1.8em;
+        padding-bottom: 1.2em;
+    }
+
+    .sidebar2 img {
+        width: 200px;
+    }
+
     .titulo {
         display: flex;
         align-items: center;
@@ -246,31 +233,14 @@ ul {
         font-family: "titulo";
         font-size: 5em;
     }
-
-    .sidebar2 {
-        grid-area: sidebar2;
-        background-color: #F4991A;
-        color: #321313;
+    .sidebar2 h1 {
+        font-size: 5em;
     }
     
-    .expo2 {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        align-items: center;
-        justify-content:space-between;
-
+    .sidebar2 h2 {
+        font-size: 3em;
     }
-    
-    .expo2 h3 {
-        font-size: 1.3em;
-    }
-    
-    .expo2 p {
-        font-size: 1.5em;
-    }
-    
-    .expo2 img{
-        width: 15em;
+    .sidebar2 span {
+        font-size: 1.5em
     }
 }
