@@ -20,10 +20,10 @@
     grid-template-rows: 150px auto 100px;
     gap: 10px;
     background-color: #F4991A;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
 h1 {

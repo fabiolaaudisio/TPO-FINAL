@@ -87,7 +87,7 @@ p {
       "sidebar" "sidebar2 ";
 
    flex-direction: row;
-   
+
 }
 
 .title {
@@ -102,6 +102,7 @@ p {
    color: #321313;
    font-family: "titulo";
 }
+
 .price_box {
    color: #F2EAD3;
 }
