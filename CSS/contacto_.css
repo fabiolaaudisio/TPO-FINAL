@@ -17,7 +17,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 150px auto 100px;
+    grid-template-rows: 150px auto 150px;
     gap: 10px;
     background-color: #F4991A;
     grid-template-areas:
