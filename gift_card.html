@@ -43,64 +43,69 @@
 
         </header>
 
-        <div class="contenedor">
-            <aside class="title">
-                <h1>CREÁ TU STELLA CAFÉ GIFT CARD</h1>
-            </aside>
+        <aside class="sidebar">
+            <img class="img" src="./img/crea tu gift card Stella Cafe.png" alt="gift card cafe stella">
+        </aside>
 
-            <aside class="sidebar">
-                <img class="img" src="./img/CoffeeStella.jpg" alt="gift card cafe stella">
-            </aside>
+        <main class="contenedor">
 
-            <form class="form">
-                <aside class="sidebar2">
+            <form>
+                <div>
 
-                    <div class="price_box">
-                        <span class="rojo">*inidca los espacios obligatorios</span>
-                        <div class="valor">
+                    <span class="rojo">*inidca los espacios obligatorios</span>
 
-                            <p><span class="rojo">*</span>Indique el valor</p>
-                            <input class="hidden" type="hidden" required>
-                            <select name="valor card" id="valor.card" aria-required="true">
-                                <option value>Elije una opción</option>
+                    <div>
 
-                                <option value="$500">$500</option>
-                                <option value="$700">$700</option>
-                                <option value="$1000">$1000</option>
-                                <option value="$1500">$1500</option>
-                                <option value="cantidad del valor total">Cantidad del valor total</option>
-                            </select>
-                        </div>
+                        <p><span class="rojo">*</span>Indique el valor</p>
 
-                        <div class="data-para">
+                        <input class="hidden" type="hidden" required>
 
-                            <p><span class="rojo">*</span>Para</p>
-                            <input type="text" placeholder="Nombre del destinatario" required>
+                        <select name="valor card" id="valor.card" aria-required="true">
+                            <option value>Elije una opción</option>
 
-                        </div>
-                        <div class="data-de">
+                            <option value="$500">$500</option>
+                            <option value="$700">$700</option>
+                            <option value="$1000">$1000</option>
+                            <option value="$1500">$1500</option>
+                            <option value="cantidad del valor total">Cantidad del valor total</option>
+                        </select>
 
-                            <p><span class="rojo">*</span>De</p>
-                            <input type="text" placeholder="Nombre del remitente" required>
+                    </div>
 
-                        </div>
+                    <div class="data-para">
 
-                        <div class="E-mail">
-                            <p><span class="rojo">*</span>Agrega un e-mail</p>
-                            <input type="email" placeholder="E-mail" required>
-                        </div>
-                        <div class="control">
-                            <p>Agregue un mensaje para el destinatario</p>
-                            <textarea name="mensaje" id="mensaje_a" cols="30" rows="10"
-                                placeholder="Agrega un mensaje...(opcional)"></textarea>
+                        <p><span class="rojo">*</span>Para</p>
+                        <input type="text" placeholder="Nombre del destinatario" required>
 
-                        </div>
-                        <button id="button">Enviar</button>
-                </aside>
+                    </div>
+
+                    <div class="data-de">
+
+                        <p><span class="rojo">*</span>De</p>
+                        <input type="text" placeholder="Nombre del remitente" required>
+
+                    </div>
+
+                    <div class="E-mail">
+                        <p><span class="rojo">*</span>Agrega un e-mail</p>
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="control">
+                        <p>Agregue un mensaje para el destinatario</p>
+                        <textarea name="mensaje" id="mensaje_a" cols="30" rows="10"
+                            placeholder="Agrega un mensaje...(opcional)"></textarea>
+
+                    </div>
+
+                    <button id="button">Enviar</button>
+
+                </div>
             </form>
-        </div>
+        </main>
 
         <footer class="footer">
+            <h3>SIGUENOS</h3>
             <div class="icons_foot">
                 <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="https://es-la.facebook.com/login/device-based/regular/login/" target="_blank"><i
@@ -112,6 +117,8 @@
                 <a href="https://www.linkedin.com" target="_blank"> <i class="fa fa-linkedin"
                         aria-hidden="true"></i></a>
             </div>
+            <p>&#169 2023 - Stella café - Todos los derechos reservados</p>
+
         </footer>
     </div>
 </body>
