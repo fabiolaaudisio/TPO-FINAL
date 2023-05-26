@@ -87,6 +87,62 @@ input {
 #button {
    width: 200px;
    height: 30px;
-   margin-top: 10px;
+   padding: 10px;
 }
 
+@media (min-width: 600px) {
+   .grid-container {
+       grid-template-columns: 200px auto;
+       grid-template-rows: 100px 550px 100px;
+       grid-template-areas:
+           "header header"
+           "sidebar main"
+           "footer footer";
+   }
+   .sidebar {
+      flex-direction: column;
+
+   }
+   .sidebar h1 {
+      padding: 70px;
+      font-size: 30px;
+   }
+   .sidebar img {
+      width: 100%;
+      height: auto;
+   }
+   .contenedor {
+      font-size: 12px;
+   }
+}
+
+@media (min-width: 900px) {
+   .grid-container {
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: 150px 400px 400px 150px;
+       margin-right: auto;
+       margin-left: auto;
+       grid-template-areas:
+           "header header header"
+           "sidebar main main"
+           "sidebar main main"
+           "footer footer footer";
+   }
+   .sidebar {
+      flex-direction: column;
+
+   }
+   .sidebar h1 {
+      padding: 100px;
+      font-size: 40px;
+   }
+   .sidebar img {
+      width: 100%;
+      height: auto;
+   }
+   .contenedor {
+      font-size: 20px;
+   }
+   
+
+}
