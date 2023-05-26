@@ -63,7 +63,7 @@ body {
 }
 
 .rojo {
-   color: #321313;
+   color: #F2EAD3;
 }
 
 select {
@@ -87,7 +87,7 @@ input {
 #button {
    width: 200px;
    height: 30px;
-   padding: 10px;
+   margin-top: 30px;
 }
 
 @media (min-width: 600px) {
