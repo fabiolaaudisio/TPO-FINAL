@@ -50,31 +50,57 @@ body {
 }
 
 .sidebar img {
-   width:auto;
    height: 100%;
+   width: auto;
 }
 
 .contenedor{
    grid-area: main;
    background-color:#F4991A;
+   width: 100%;
+   height: 100%;
+}
+
+.form {
+   height: 100%;
+   width: 100%;
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
 }
 
-.rojo {
+.form>div {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+   height: 80%;
+   width: 80%;
+}
+
+.obligatorio {
    color: #F2EAD3;
+}
+
+.input {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   min-width: 250px;
+}
+
+label {
+   color: #321313;
+   font-family: "subtitulo";
+   font-size: 1.5em;
 }
 
 select {
    margin: 0px;
    border-radius: 5px;
    height: 27px;
-   border-color: black;
-}
-
-#mensaje_a {
-   border-radius: 6px;
+   width: 177px;
    border-color: black;
 }
 
@@ -82,6 +108,8 @@ input {
    border-radius: 5px;
    height: 20px;
    border-color: black;
+   color: #321313;
+   font-family: "subtitulo"
 }
 
 #button {
@@ -133,7 +161,7 @@ input {
 
    }
    .sidebar h1 {
-      padding: 100px;
+      padding: 70px;
       font-size: 40px;
    }
    .sidebar img {
@@ -141,7 +169,7 @@ input {
       height: auto;
    }
    .contenedor {
-      font-size: 20px;
+      font-size: 15px;
    }
    
 

@@ -29,31 +29,22 @@ html{
     "footer";
 }
 
-.card {
-    width: 100%; 
-    height: auto;
-    background-color: #F2EAD3;
-    font-size: 1.5em;
-}
-
-.list-group-item {
-    background-color: #F2EAD3;
-}
-
-#api {
+#card {
     grid-area: main;
     background-color:#F4991A;
     display: flex;
     justify-content:center;
     align-items: center;
-    border-radius: 5%;
 }
 
-.link {
-    padding: 1em;
-    & :hover {
-        color:#F4991A;
-    }
+.card {
+    background-color: #F2EAD3;
+    font-size: 1.5em;
+    width: 50%;
+}
+
+.list-group-item {
+    background-color: #F2EAD3;
 }
 
 @media (min-width: 600px) {
@@ -65,7 +56,7 @@ html{
         "footer footer";
     }
     
-    #api {
+    #card {
         grid-area: main;
         background-color:#F4991A;
         display: flex;
@@ -93,7 +84,7 @@ html{
         "footer footer footer";
     }
    
-    #api {
+    #card {
         grid-area: main;
         background-color:#F4991A;
         display: flex;

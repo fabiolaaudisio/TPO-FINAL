@@ -14,17 +14,24 @@
 }
 
 
-.grid-container {
+html {
+    min-height: 100%;
+ }
+ 
+ body {
+    font-size: 10px;
+ }
+ 
+ .grid-container {
     display: grid;
+    gap: 1em;
     grid-template-columns: auto;
-    grid-template-rows: 150px auto 150px;
-    gap: 10px;
-    background-color: #F4991A;
+    grid-template-rows: 10em auto 10em;
     grid-template-areas:
         "header"
         "main"
         "footer";
-}
+ }
 
 h1 {
     font-family: "titulo";
@@ -45,8 +52,25 @@ p {
     grid-area: main;
     background-color: #F4991A;
     text-align: center;
-    font-size: 30px;
     font-family: "texto";
     font-size: medium;
-    margin-top: 80px;
 }
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 500px 300px 200px;
+        margin-right: auto;
+        margin-left: auto;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "main main"
+            "footer footer";
+    }
+  
+    .form {
+       font-size: large;
+    }
+    
+ }
